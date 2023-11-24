@@ -1,14 +1,6 @@
+# funcoes.py
 import datetime
 import pickle
-
-# Função para exibir o menu principal
-def exibir_menu():
-    print("\n===== Menu Principal =====")
-    print("1. Registrar Leitura de Glicose")
-    print("2. Ver Histórico de Leituras")
-    print("3. Calibrar Dispositivo")
-    print("4. Calcular Média das Leituras")
-    print("5. Sair")
 
 # Função para registrar leitura de glicose
 def registrar_leitura(leituras):
@@ -60,6 +52,8 @@ def carregar_leituras():
 
 # Função principal
 def main():
+    from menu import exibir_menu
+
     leituras_glicose = carregar_leituras()
 
     while True:
