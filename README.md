@@ -43,3 +43,7 @@ Este é um programa em Python representando um MVP (Produto Mínimo Viável) par
 
 - Gabriel Onodera - RM533779
 - Soraya Haddad - RM554032
+
+## Video no Youtube
+
+- https://youtu.be/yDUbRJRCZoE
