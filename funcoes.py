@@ -17,6 +17,15 @@ def carregar_leituras():
         print(f"Erro ao carregar leituras: {e}")
         return []
 
+# Função para registrar leitura de glicose
+def registrar_leitura(leituras):
+    nivel_glicose = float(input("Digite o nível de glicose: "))
+    data_hora = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    leitura = {'Nível de Glicose': nivel_glicose, 'Data e Hora': data_hora}
+    leituras.append(leitura)
+    print(f"Leitura registrada: {leitura}")
+
+
 # Função para exibir o histórico de leituras
 def ver_historico(leituras):
     if not leituras:
@@ -66,7 +75,7 @@ def main():
         opcao = input("\nSelecione uma opção (1-5): ")
 
         if opcao == '1':
-            carregar_leituras(leituras_glicose)
+            registrar_leitura(leituras_glicose)  # Modificado para chamar uma nova função
         elif opcao == '2':
             ver_historico(leituras_glicose)
         elif opcao == '3':
@@ -80,5 +89,14 @@ def main():
         else:
             print("Opção inválida. Por favor, escolha uma opção válida.")
 
-if __name__ == "__main__":
-    main()
+# Função para registrar leitura de glicose
+def registrar_leitura(leituras):
+    nivel_glicose = float(input("Digite o nível de glicose: "))
+    data_hora = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    leitura = {'Nível de Glicose': nivel_glicose, 'Data e Hora': data_hora}
+    leituras.append(leitura)
+    print(f"Leitura registrada: {leitura}")
+
+
+
+
