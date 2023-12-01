@@ -59,9 +59,16 @@ def carregar_leituras():
         with open("leituras.pkl", "rb") as file:
             leituras = pickle.load(file)
         print("Leituras carregadas com sucesso!")
+        print("Conteúdo do arquivo:")
+        print(leituras)
         return leituras
     except FileNotFoundError:
+        print("Arquivo não encontrado. Criando um novo.")
         return []
+    except Exception as e:
+        print(f"Erro ao carregar leituras: {e}")
+        return []
+
 
 # Função principal
 def main():
