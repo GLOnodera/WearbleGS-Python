@@ -46,4 +46,4 @@ Este é um programa em Python representando um MVP (Produto Mínimo Viável) par
 
 ## Video no Youtube
 
-- https://youtu.be/yDUbRJRCZoE
+- https://youtu.be/S6ARi4HPzto
