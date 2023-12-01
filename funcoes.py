@@ -80,7 +80,7 @@ def main():
         opcao = input("\nSelecione uma opção (1-5): ")
 
         if opcao == '1':
-            registrar_leitura(leituras_glicose)
+            carregar_leituras(leituras_glicose)
         elif opcao == '2':
             ver_historico(leituras_glicose)
         elif opcao == '3':
