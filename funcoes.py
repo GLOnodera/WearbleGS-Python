@@ -17,20 +17,6 @@ def carregar_leituras():
         print(f"Erro ao carregar leituras: {e}")
         return []
 
-
-def imprimir_conteudo_arquivo():
-    try:
-        with open("leituras.pkl", "rb") as file:
-            conteudo = pickle.load(file)
-        print("Conteúdo do arquivo:")
-        print(conteudo)
-    except FileNotFoundError:
-        print("Arquivo não encontrado.")
-    except Exception as e:
-        print(f"Erro ao ler o arquivo: {e}")
-
-imprimir_conteudo_arquivo()
-
 # Função para exibir o histórico de leituras
 def ver_historico(leituras):
     if not leituras:
