@@ -1,4 +1,3 @@
-# Função para exibir o menu principal
 def exibir_menu():
     print("\n===== Menu Principal =====")
     print("1. Registrar Leitura de Glicose")
