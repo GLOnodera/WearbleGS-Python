@@ -1,4 +1,3 @@
-# funcoes.py
 import datetime
 import pickle
 
