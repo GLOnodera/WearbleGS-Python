@@ -2,15 +2,34 @@ import datetime
 import pickle
 
 # Função para registrar leitura de glicose
-def registrar_leitura(leituras):
+def carregar_leituras():
     try:
-        nivel_glicose = float(input("Informe o nível de glicose: "))
-        data_hora = datetime.datetime.now()
-        leitura = {"Nível de Glicose": nivel_glicose, "Data e Hora": data_hora}
-        leituras.append(leitura)
-        print("Leitura registrada com sucesso!")
-    except ValueError:
-        print("Erro: Por favor, insira um valor numérico válido.")
+        with open("leituras.pkl", "rb") as file:
+            leituras = pickle.load(file)
+        print("Leituras carregadas com sucesso!")
+        print("Conteúdo do arquivo:")
+        print(leituras)
+        return leituras
+    except FileNotFoundError:
+        print("Arquivo não encontrado. Criando um novo.")
+        return []
+    except Exception as e:
+        print(f"Erro ao carregar leituras: {e}")
+        return []
+
+
+def imprimir_conteudo_arquivo():
+    try:
+        with open("leituras.pkl", "rb") as file:
+            conteudo = pickle.load(file)
+        print("Conteúdo do arquivo:")
+        print(conteudo)
+    except FileNotFoundError:
+        print("Arquivo não encontrado.")
+    except Exception as e:
+        print(f"Erro ao ler o arquivo: {e}")
+
+imprimir_conteudo_arquivo()
 
 # Função para exibir o histórico de leituras
 def ver_historico(leituras):
